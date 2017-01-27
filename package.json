@@ -1,0 +1,29 @@
+{
+  "name": "lolql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-reload | npm run reload",
+    "start-reload": "nodemon --exec node lib/index.js",
+    "reload": "nodemon --ignore lib/ --exec npm run build",
+    "build": "babel src -d lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "es6-promise": "^4.0.5",
+    "express": "^4.14.0",
+    "graphql": "^0.8.2",
+    "graphql-server-express": "^0.4.3",
+    "install": "^0.8.2",
+    "leagueapi": "^0.4.21",
+    "npm": "^4.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "nodemon": "^1.11.0"
+  }
+}
